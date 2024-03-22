@@ -16,7 +16,7 @@ public class TestChasescroll extends BaseClass {
 
 	@Test(priority = 2)
 	public void ValidePageTitle() {
-		String actual = "Creating Unforgetabble Memories";
+		String actual = "Creating Unforgetable Memories";
 		String expect = driver.getTitle();
 		Assert.assertEquals(actual, expect);
 	}
@@ -29,10 +29,11 @@ public class TestChasescroll extends BaseClass {
 	}
 
 	@Test(priority = 4)
-	public void verifyurl() {
+	public void verifyurl() throws InterruptedException {
 		String actual = "https://chasescroll-next-app-test.vercel.app/dashboard/event";
 		String expected = driver.getCurrentUrl();
 		Assert.assertEquals(actual, expected);
+		Thread.sleep(3000);
 	}
 
 }
