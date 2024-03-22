@@ -13,10 +13,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
 
 import extentManager.ExtentManager;
 
@@ -35,7 +35,7 @@ public class BaseClass {
 	}
 
 	
-	@BeforeMethod
+	@BeforeTest
 	public void build() {
 		String browser = System.getProperty("browser");		
 		if (browser.equalsIgnoreCase("Chrome")) {
@@ -51,7 +51,7 @@ public class BaseClass {
 		}
 	
 	
-	@AfterMethod
+	@AfterTest
 	public void teardown() {
 		if(driver != null) {
 			driver.quit();
