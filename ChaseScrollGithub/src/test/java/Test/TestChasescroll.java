@@ -24,7 +24,7 @@ public class TestChasescroll extends BaseClass {
 	@Test(priority = 3)
 	public void loginTest() {
 		driver.findElement(By.xpath("//input[@placeholder='Enter your Email or Username']")).sendKeys("Davido");
-		driver.findElement(By.xpath("input[placeholder='Enter your password']")).sendKeys("Test1234");
+		driver.findElement(By.xpath("//input[@placeholder='Enter your password']")).sendKeys("Test1234");
 		driver.findElement(By.xpath("//button[normalize-space()='Login']")).click();
 	}
 
