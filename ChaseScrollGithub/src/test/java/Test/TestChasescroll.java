@@ -29,11 +29,12 @@ public class TestChasescroll extends BaseClass {
 	}
 
 	@Test(priority = 4)
-	public void verifyurl() throws InterruptedException {
+	public void verifyurl() {
+		driver.findElement(By.xpath("//input[@placeholder='Search for users, event or...']")).sendKeys("ope");
 		String actual = "https://chasescroll-next-app-test.vercel.app/dashboard/event";
 		String expected = driver.getCurrentUrl();
 		Assert.assertEquals(actual, expected);
-		Thread.sleep(3000);
+		
 	}
 
 }
