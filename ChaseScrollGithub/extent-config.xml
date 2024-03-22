@@ -3,7 +3,7 @@
     <configuration>
         <!-- report theme -->
         <!-- standard, dark -->
-        <theme>standard</theme>
+        <theme>Dark</theme>
     
         <!-- document encoding -->
         <!-- defaults to UTF-8 -->
@@ -14,11 +14,12 @@
         <protocol>http</protocol>
         
         <!-- title of the document -->
-        <documentTitle>OrangeHRMProject</documentTitle>
+        <documentTitle>Chasescroll</documentTitle>
         
         <!-- report name - displayed at top-nav -->
-        <reportName>OrangeHRMProject Report
-         <![CDATA[
+        <reportName>
+            <![CDATA[
+                Chasescroll
                 <img src='http://localhost:8080/job/Chasescroll/ws/ChaseScrollGithub/Logo/chasescroll-logo.png'/>
             ]]>
         </reportName>
@@ -39,9 +40,8 @@
         <!-- custom styles -->
         <styles>
             <![CDATA[
-            .report-name { padding-left: 18px; } .report-name > img { float: 
-      left;height: 90%;margin-left: 30px;margin-top: 3px;width: auto; }
-        ]]>
+                .report-name { padding-left: 18px; } .report-name > img { float: left; height: 90%; margin-left: 30px; margin-top: 3px; width: auto; }
+            ]]>
         </styles>
     </configuration>
 </extentreports>
