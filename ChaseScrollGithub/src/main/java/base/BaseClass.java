@@ -37,8 +37,7 @@ public class BaseClass {
 	
 	@BeforeMethod
 	public void build() {
-		String browser = System.getProperty("browser");
-		if (driver != null) {
+		String browser = System.getProperty("browser");		
 		if (browser.equalsIgnoreCase("Chrome")) {
 			driver = new ChromeDriver();
 		}else if (browser.equalsIgnoreCase("Firefox")) {
@@ -50,7 +49,7 @@ public class BaseClass {
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 			driver.get(System.getProperty("url"));
 		}
-	}
+	
 	
 	@AfterMethod
 	public void teardown() {
